@@ -12,7 +12,7 @@ if (_disposition.case.caseType == "JC") {
 // when the Small Claim case requires void case.IR546286
 if (_disposition.dispositionType =='1300VSC' && _disposition.reopenReasonDate == null){
     cse = _disposition.case;
-    //cse.dispositionType = '1300SC';
+    //cse.dispositionType = '1300SC' removed hard code
     cse.dispositionType = _disposition.dispositionType;
     cse.dispositionDate = _disposition.dispositionDate;
 
