@@ -3,7 +3,7 @@ logger.debug("unvoid case ${_case}");
 
 //voided = _case.dispositionType == '2100' || _case.collect("roaMessages[message=='Case is Voided']").notEmpty;
 //IR546286 Charlton added on 9/8/2020
-voided = (_case.dispositionType == '2100' || _case.collect("roaMessages[message=='Case is Voided']").notEmpty;
+voided = (_case.dispositionType == '2100' || _case.collect("roaMessages[message=='Case is Voided']")).notEmpty;
 if (!voided) {
   addError("Case ${_case.caseNumber} is currently not void");
   return;
